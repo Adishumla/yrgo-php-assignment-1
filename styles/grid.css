@@ -1,0 +1,16 @@
+body {
+  padding: 40px;
+  background: var(--color-background);
+}
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 0.5fr));
+  grid-gap: 1rem;
+  grid-auto-rows: 1fr;
+}
+div.movie img {
+  width: 100%;
+  object-fit: contain;
+  border: 4px solid #000;
+  border-radius: 15px;
+}
