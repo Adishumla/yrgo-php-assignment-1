@@ -1,0 +1,10 @@
+div.movie img {
+  transition: all 0.2s ease-in-out;
+}
+div.movie img:hover {
+  background-color: #000000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+}
