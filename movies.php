@@ -1,5 +1,6 @@
 <?php
 
+declare(strict_types=1);
 $movies = [
     'Blade Runner 2049' => [
         'director' => 'Ridley Scott',
@@ -59,3 +60,11 @@ $movies = [
     ],
 
 ];
+
+//filter movies by genre if genre button is pressed in index.php form
+if (isset($_POST['genre'])) {
+    $genre = $_POST['genre'];
+    $movies = array_filter($movies, function ($movie) use ($genre) {
+        return $movie['genre'] === $genre;
+    });
+}

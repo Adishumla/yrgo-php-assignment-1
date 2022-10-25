@@ -8,5 +8,35 @@ div.movie {
 }
 div.movie img {
   width: 130px;
+  height: 200px;
   border-radius: 5px;
+}
+.main-photos {
+  display: flex;
+  justify-content: center;
+}
+.main-photo {
+  width: 95%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.movie-grid-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  div.movie {
+    width: 200px;
+  }
+  div.movie img {
+    width: 200px;
+    height: 300px;
+  }
+  .movie-grid-header {
+    font-size: 2rem;
+  }
 }

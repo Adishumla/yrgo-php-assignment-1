@@ -8,3 +8,13 @@ div.movie img:hover {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
 }
+.main-photo {
+  transition: all 0.2s ease-in-out;
+}
+.main-photo:hover {
+  background-color: #000000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+}
