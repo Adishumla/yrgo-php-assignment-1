@@ -18,3 +18,20 @@ div.movie img:hover {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
 }
+.tag {
+  background: rgba(255, 243, 0, 0.44);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 243, 0, 0.34);
+}
+.genre-button {
+  background: var(--jet);
+  border-radius: 5px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid var(--persian-green);
+  color: var(--white);
+}

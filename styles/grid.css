@@ -37,13 +37,32 @@ div.movie img {
   height: 15px;
   color: black;
   padding: 5px;
-  border-radius: 10px;
   //border: 1px solid yellow;
   font-size: 0.8rem;
   opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.filter-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.genre-button {
+  margin: 0 5px;
+  padding: 15px;
+  //font-size: 1.2rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+.genre-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {

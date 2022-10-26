@@ -26,14 +26,29 @@ session_start();
         </section>
         <section class="genre-section">
             <!-- if button is pressed change genre in movies.php filter-->
-            <form action="index.php" method="POST">
+            <!-- <form class="filter-form" action="index.php" method="POST">
                 <button class="genre-button" name="genre" value="Action">Action</button>
                 <button class="genre-button" name="genre" value="Sci-Fi">Sci-Fi</button>
                 <button class="genre-button" name="genre" value="Horror">Horror</button>
+                 remove filter
+            <button class="genre-button" name="genre" value="All">All</button>
+            </form> -->
+
+            <!-- form for all genres in movies array, each array type can only apear once-->
+            <form class="filter-form" action="index.php" method="POST">
+                <?php
+                $genres = [];
+                foreach ($movies as $movie) {
+                    if (!in_array($movie['genre'], $genres)) {
+                        array_push($genres, $movie['genre']);
+                    }
+                }
+                foreach ($genres as $genre) {
+                    echo "<button class='genre-button' name='genre' value='$genre'>$genre</button>";
+                }
+                ?>
                 <!-- remove filter -->
                 <button class="genre-button" name="genre" value="All">All</button>
-            </form>
-
         </section>
         <h2 class="movie-grid-header">All our movies</h2>
         <section class="movie-grid">
