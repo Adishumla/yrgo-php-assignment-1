@@ -30,6 +30,8 @@ session_start();
                 <button class="genre-button" name="genre" value="Action">Action</button>
                 <button class="genre-button" name="genre" value="Sci-Fi">Sci-Fi</button>
                 <button class="genre-button" name="genre" value="Horror">Horror</button>
+                <!-- remove filter -->
+                <button class="genre-button" name="genre" value="All">All</button>
             </form>
 
         </section>
@@ -54,11 +56,15 @@ session_start();
             ?>
                 <div class="movie" id="<?php echo $movieInfo['genre'] ?>">
                     <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
-                    <h2><?php echo $movie ?></h2>
+                    <!-- <h2><?php echo $movie ?></h2>
                     <p><?php echo $movieInfo['director'] ?></p>
                     <p><?php echo $movieInfo['year'] ?></p>
                     <p><?php echo $movieInfo['genre'] ?></p>
-                    <p><?php echo $movieInfo['rating'] ?></p>
+                    <p><?php echo $movieInfo['rating'] ?></p> -->
+                    <!-- movie rating as tag -->
+                    <div class="tag">
+                        <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
+                    </div>
                 </div>
             <?php endforeach;
             ?>

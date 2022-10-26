@@ -28,6 +28,24 @@ div.movie img {
   font-size: 1.5rem;
 }
 
+.tag {
+  // put at the bottom on the poster
+  position: absolute;
+  margin-top: -30px;
+  background-color: yellow;
+  width: 60px;
+  height: 15px;
+  color: black;
+  padding: 5px;
+  border-radius: 10px;
+  //border: 1px solid yellow;
+  font-size: 0.8rem;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (min-width: 768px) {
   div.movie {
     width: 200px;
