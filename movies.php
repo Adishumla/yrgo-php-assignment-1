@@ -408,12 +408,14 @@ $movies = [
         'rating' => 8.5,
         'photo' => 'posters/Whiplash.jpeg'
     ],
-
-
-
-
 ];
-
+//foreach genre from $movies, remove duplicates and sort alphabetically, then add to $genres array
+$genres = [];
+foreach ($movies as $movie) {
+    $genres[] = $movie['genre'];
+}
+$genres = array_unique($genres);
+sort($genres);
 //filter movies by genre if genre button is pressed in index.php form
 if (isset($_POST['genre'])) {
     if ($_POST['genre'] === "All") {

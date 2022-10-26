@@ -34,21 +34,14 @@ session_start();
             <button class="genre-button" name="genre" value="All">All</button>
             </form> -->
 
-            <!-- form for all genres in movies array, each array type can only apear once-->
+            <!-- form for all genre in $genres array -->
             <form class="filter-form" action="index.php" method="POST">
-                <?php
-                $genres = [];
-                foreach ($movies as $movie) {
-                    if (!in_array($movie['genre'], $genres)) {
-                        array_push($genres, $movie['genre']);
-                    }
-                }
-                foreach ($genres as $genre) {
-                    echo "<button class='genre-button' name='genre' value='$genre'>$genre</button>";
-                }
-                ?>
+                <?php foreach ($genres as $genre) : ?>
+                    <button class="genre-button" name="genre" value="<?= $genre ?>"><?= $genre ?></button>
+                <?php endforeach; ?>
                 <!-- remove filter -->
                 <button class="genre-button" name="genre" value="All">All</button>
+
         </section>
         <h2 class="movie-grid-header">All our movies</h2>
         <section class="movie-grid">
