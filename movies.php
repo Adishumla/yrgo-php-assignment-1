@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 $movies = [
     'Blade Runner 2049' => [
         'director' => 'Ridley Scott',

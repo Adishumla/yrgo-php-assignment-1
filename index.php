@@ -11,14 +11,18 @@
     <link rel="stylesheet" href="/styles/effect.css">
     <title>Movie Library</title>
 </head>
-<?php //require movies.php
+<?php
+//require movies.php
 require 'movies.php';
+require 'functions.php';
 session_start();
 ?>
 
 <body>
     <header>
         <h1>Movie Library</h1>
+        <!--button to watchlist.php-->
+        <a href="watchlist.php" class="watchlist-button">Watchlist</a>
     </header>
     <main>
         <section class="main-photos">
@@ -44,6 +48,9 @@ session_start();
 
         </section>
         <h2 class="movie-grid-header">All our movies</h2>
+        <?php
+        //show movies added to watchlist
+        ?>
         <section class="movie-grid">
             <?php //foreach ($movies as $movie => $movieInfo) :
             ?>
@@ -73,10 +80,12 @@ session_start();
                     <div class="tag">
                         <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                     </div>
+                    <!-- function saveMovie -->
                 </div>
             <?php endforeach;
             ?>
     </main>
+
 </body>
 
 </html>
