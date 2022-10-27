@@ -14,13 +14,12 @@
 <?php
 require 'movies.php';
 require 'functions.php';
-//require 'index.php';
 ?>
 
 <body>
     <a href="index.php" class="back-button">Back</a>
     <?php
-    showWatchlist()
+    showWatchlist();
     ?>
 </body>
 

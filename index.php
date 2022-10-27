@@ -80,7 +80,11 @@ session_start();
                     <div class="tag">
                         <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                     </div>
-                    <!-- function saveMovie -->
+                    <!-- pressing a button should add the movies into the addToWatchlist function -->
+                    <form class="watchlist-form" action="index.php" method="POST">
+                        <button class="watchlist-button" name="watchlist" value="<?php echo $movie ?>">Add to watchlist</button>
+                    </form>
+
                 </div>
             <?php endforeach;
             ?>
