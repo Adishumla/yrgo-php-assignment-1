@@ -19,6 +19,7 @@ require 'functions.php';
 <body>
     <a href="index.php" class="back-button">Back</a>
     <?php
+    // show all movies added to watchlist
     showWatchlist();
     ?>
 </body>

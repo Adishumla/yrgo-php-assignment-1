@@ -15,6 +15,11 @@
 //require movies.php
 require 'movies.php';
 require 'functions.php';
+if (isset($_POST['movie'])) {
+    var_dump($_POST['movie']);
+    addToWatchlist($_POST['movie']);
+}
+
 session_start();
 ?>
 
@@ -67,27 +72,26 @@ session_start();
         </section>
         <!-- movie section that gets movie movie genre from genre-section buttons and filter them-->
         <section class="movie-grid">
-            <?php foreach ($movies as $movie => $movieInfo) :
-            ?>
-                <div class="movie" id="<?php echo $movieInfo['genre'] ?>">
-                    <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
-                    <!-- <h2><?php echo $movie ?></h2>
-                    <p><?php echo $movieInfo['director'] ?></p>
-                    <p><?php echo $movieInfo['year'] ?></p>
-                    <p><?php echo $movieInfo['genre'] ?></p>
-                    <p><?php echo $movieInfo['rating'] ?></p> -->
-                    <!-- movie rating as tag -->
-                    <div class="tag">
-                        <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
-                    </div>
-                    <!-- pressing a button should add the movies into the addToWatchlist function -->
-                    <form class="watchlist-form" action="index.php" method="POST">
-                        <button class="watchlist-button" name="watchlist" value="<?php echo $movie ?>">Add to watchlist</button>
-                    </form>
+            <form action="index.php" method="post">
+                <?php foreach ($movies as $movie => $movieInfo) : ?>
+                    <div class="movie" id="<?php echo $movieInfo['genre'] ?>">
+                        <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
+                        <!-- <h2><?php echo $movie ?></h2>
+                        <p><?php echo $movieInfo['director'] ?></p>
+                        <p><?php echo $movieInfo['year'] ?></p>
+                        <p><?php echo $movieInfo['genre'] ?></p>
+                        <p><?php echo $movieInfo['rating'] ?></p> -->
+                        <!-- movie rating as tag -->
+                        <div class="tag">
+                            <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
+                        </div>
+                        <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">Add to watchlist</button>
 
-                </div>
-            <?php endforeach;
-            ?>
+
+                    </div>
+                <?php endforeach; ?>
+            </form>
+        </section>
     </main>
 
 </body>

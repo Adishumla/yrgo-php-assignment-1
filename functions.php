@@ -9,8 +9,10 @@ function addToWatchlist($movie)
     }
     // if movie is not in watchlist add it
     if (!in_array($movie, $_SESSION['watchlist'])) {
-        array_push($_SESSION['watchlist'], $movie);
+        echo "added to watchlist";
+        $_SESSION['watchlist'][] = $movie;
     }
+    var_dump($_SESSION['watchlist']);
 }
 function showWatchlist()
 {
