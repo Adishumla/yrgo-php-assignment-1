@@ -19,6 +19,10 @@ if (isset($_POST['movie'])) {
     var_dump($_POST['movie']);
     addToWatchlist($_POST['movie']);
 }
+echo "<pre>";
+var_dump($_SESSION['watchlist']);
+echo "</pre>";
+showWatchlist();
 
 session_start();
 ?>

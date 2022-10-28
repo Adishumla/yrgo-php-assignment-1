@@ -10,9 +10,9 @@ function addToWatchlist($movie)
     // if movie is not in watchlist add it
     if (!in_array($movie, $_SESSION['watchlist'])) {
         echo "added to watchlist";
-        $_SESSION['watchlist'][] = $movie;
+        $_SESSION['watchlist'] = $movie;
     }
-    var_dump($_SESSION['watchlist']);
+    //var_dump($_SESSION['watchlist']);
 }
 function showWatchlist()
 {
@@ -27,7 +27,7 @@ function showWatchlist()
         // if watchlist is not empty show all movies
         echo "<h2 class='movie-grid-header'>Your watchlist</h2>";
         echo "<section class='movie-grid'>";
-        foreach ($_SESSION['watchlist'] as $movie) {
+        /* foreach ($_SESSION['watchlist'] as $movie) {
             echo "<div class='movie'>";
             echo "<img src='" . $GLOBALS['movies'][$movie]['photo'] . "' alt='" . $movie . "' />";
             echo "<div class='tag'>";
@@ -35,7 +35,10 @@ function showWatchlist()
             echo "</div>";
             echo "<button class='save-button' onclick='removeMovie(\"" . $movie . "\")'>-</button>";
             echo "</div>";
-        }
+        } */
+        print_r($_SESSION['watchlist']);
+        echo "<br>";
+        echo gettype($_SESSION['watchlist']);
         echo "</section>";
     }
 }
