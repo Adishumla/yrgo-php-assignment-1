@@ -48,6 +48,7 @@ in-photo {
 .add-button:hover {
   background: var(--persian-green);
   color: var(--white);
+  opacity: 1;
 }
 .navbar-link:hover {
   color: var(--persian-green);
