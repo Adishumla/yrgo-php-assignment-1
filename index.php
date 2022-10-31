@@ -49,11 +49,27 @@ session_start();
 
             <!-- form for all genre in $genres array -->
             <form class="filter-form" action="index.php" method="POST">
-                <?php foreach ($genres as $genre) : ?>
+                <!-- <?php foreach ($genres as $genre) : ?>
                     <button class="genre-button" name="genre" value="<?= $genre ?>"><?= $genre ?></button>
                 <?php endforeach; ?>
-                <!-- remove filter -->
-                <button class="genre-button" name="genre" value="All">All</button>
+                 remove filter
+                <button class="genre-button" name="genre" value="All">All</button> -->
+                <!--dropdown that filters all genres -->
+                <select class="genre-button" name="genre" id="genre">
+                    <option value="All">All</option>
+                    <?php foreach ($genres as $genre) : ?>
+                        <option value="<?= $genre ?>"><?= $genre ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <!-- filter all movies by rating-->
+                <select class="genre-button" name="rating" id="rating">
+                    <option value="All">All</option>
+                    <?php foreach ($ratings as $rating) : ?>
+                        <option value="<?= $rating ?>"><?= $rating ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <button class="genre-button" type="submit">Filter</button>
+
 
         </section>
         <h2 class="movie-grid-header">All our movies</h2>

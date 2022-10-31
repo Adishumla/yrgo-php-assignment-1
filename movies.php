@@ -445,3 +445,18 @@ if (isset($_POST['genre'])) {
         return $movie['genre'] === $genre;
     });
 }
+//array with all ratings from $movies array
+$ratings = [];
+foreach ($movies as $movie) {
+    $ratings[] = $movie['rating'];
+}
+//remove duplicates and sort alphabetically
+$ratings = array_unique($ratings);
+sort($ratings);
+//filter all movies by rating if rating button is pressed in index.php form
+if (isset($_POST['rating'])) {
+    $rating = $_POST['rating'];
+    $movies = array_filter($movies, function ($movie) use ($rating) {
+        return $movie['rating'] >= $rating;
+    });
+}
