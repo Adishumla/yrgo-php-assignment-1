@@ -51,22 +51,25 @@ function showWatchlist()
     // if watchlist is empty show message
     if (empty($_SESSION['watchlist'])) {
         echo "<h2 class='movie-grid-header'>Your watchlist is empty</h2>";
-    } else {
-        // if watchlist is not empty show all movies
-        echo "<h2 class='movie-grid-header'>Your watchlist</h2>";
-        echo "<section class='movie-grid'>";
-        echo "<form action='watchlist.php' method='post'>";
-        foreach ($_SESSION['watchlist'] as $movie) {
-            echo "<div class='movie'>";
-            echo "<img src='" . $GLOBALS['movies'][$movie]['photo'] . "' alt='" . $movie . "' />";
-            echo "<div class='tag'>";
-            echo "<p>" . "IMDB: " . $GLOBALS['movies'][$movie]['rating'] . "</p>";
-            echo "</div>";
-            echo "<button class='add-button' name='remove' value='" . $movie . "'>-</button>";
-            echo "</div>";
-        }
-        echo "</form>";
-        echo "</section>";
+    } else { ?>
+        <h2 class="movie-grid-header">Your watchlist</h2>
+        <form action="watchlist.php" method="post">
+
+            <section class="movie-grid">
+                <?php foreach ($_SESSION['watchlist'] as $movie) : ?>
+                    <div class="movie">
+                        <img src="<?php echo $GLOBALS['movies'][$movie]['photo']; ?>" alt="<?php echo $movie; ?>" />
+                        <div class="tag">
+                            <p><?php echo "IMDB: " . $GLOBALS['movies'][$movie]['rating']; ?></p>
+                        </div>
+                        <button class="add-button" name="remove" value="<?php echo $movie; ?>">-</button>
+                    </div>
+                <?php endforeach; ?>
+            </section>
+
+        </form>
+<?php
+
     }
 }
 
