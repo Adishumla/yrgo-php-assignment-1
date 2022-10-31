@@ -460,3 +460,7 @@ if (isset($_POST['rating'])) {
         return $movie['rating'] >= $rating;
     });
 }
+// if isset movie in index.php form, add to $watchlist array
+/* if (isset($_POST['movie'])) {
+    $watchlist[] = $_POST['movie'];
+} */

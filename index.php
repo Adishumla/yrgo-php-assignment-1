@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,16 +17,10 @@
 require 'movies.php';
 require 'functions.php';
 if (isset($_POST['movie'])) {
-    var_dump($_POST['movie']);
     addToWatchlist($_POST['movie']);
 }
-echo "<pre>";
-var_dump($_SESSION['watchlist']);
-echo "</pre>";
-showWatchlist();
-
-session_start();
 ?>
+
 
 <body>
     <header>
@@ -61,13 +56,7 @@ session_start();
                         <option value="<?= $genre ?>"><?= $genre ?></option>
                     <?php endforeach; ?>
                 </select>
-                <!-- filter all movies by rating-->
-                <select class="genre-button" name="rating" id="rating">
-                    <option value="All">All</option>
-                    <?php foreach ($ratings as $rating) : ?>
-                        <option value="<?= $rating ?>"><?= $rating ?></option>
-                    <?php endforeach; ?>
-                </select>
+
                 <button class="genre-button" type="submit">Filter</button>
 
 
@@ -113,7 +102,9 @@ session_start();
             </form>
         </section>
     </main>
-
+    <footer>
+        <p>© 2021 Movie Library</p>
+    </footer>
 </body>
 
 </html>
