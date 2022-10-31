@@ -45,7 +45,7 @@ div.movie img {
   align-items: center;
 }
 .add-button {
-  position: absolute;
+  /*   position: absolute;
   margin-top: -301px;
   background-color: #f5f5f5;
   width: 30px;
@@ -57,8 +57,14 @@ div.movie img {
   opacity: 0.9;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
+.add-movie {
+  // put at the top of the img
+  position: absolute;
+  margin-bottom: -40px;
+}
+
 .filter-form {
   display: flex;
   justify-content: center;
@@ -99,8 +105,7 @@ div.movie img {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: #f5f5f5;
-  height: 60px;
+  height: 100px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -108,7 +113,7 @@ div.movie img {
 }
 .navbar-list {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 20px;
   align-items: center;
   list-style: none;
@@ -118,7 +123,7 @@ div.movie img {
 .navbar-item {
   font-size: 1.2rem;
   font-weight: 500;
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 .navbar-link {

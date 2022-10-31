@@ -1,9 +1,29 @@
 body {
-  padding: 40px;
+  padding: 0px 40px;
   font-family: 'roboto', sans-serif;
   color: white;
   background: var(--jet);
 }
 .navbar {
-  border-bottom: 1px solid var(--terra-cotta);
+  border-bottom: 1px solid var(--mint-cream);
+  padding: 10px;
+}
+.navbar-list {
+  text-decoration: none !important;
+}
+a {
+  text-decoration: none;
+}
+.watchlist-button {
+  background: var(--mint-cream);
+  color: var(--jet);
+  opacity: 0.6;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
 }

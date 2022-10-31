@@ -44,11 +44,13 @@ function showWatchlist()
             <section class="movie-grid">
                 <?php foreach ($_SESSION['watchlist'] as $movie) : ?>
                     <div class="movie">
+                        <div class="add-movie">
+                            <button class="add-button watchlist-button" name="remove" value="<?php echo $movie; ?>">-</button>
+                        </div>
                         <img src="<?php echo $GLOBALS['movies'][$movie]['photo']; ?>" alt="<?php echo $movie; ?>" />
                         <div class="tag">
                             <p><?php echo "IMDB: " . $GLOBALS['movies'][$movie]['rating']; ?></p>
                         </div>
-                        <button class="add-button" name="remove" value="<?php echo $movie; ?>">-</button>
                     </div>
                 <?php endforeach; ?>
             </section>

@@ -78,6 +78,9 @@ if (isset($_POST['movie'])) {
             <form action="index.php" method="post">
                 <?php foreach ($movies as $movie => $movieInfo) : ?>
                     <div class="movie" id="<?php echo $movieInfo['genre'] ?>">
+                        <div class="add-movie">
+                            <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
+                        </div>
                         <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
                         <!-- <h2><?php echo $movie ?></h2>
                         <p><?php echo $movieInfo['director'] ?></p>
@@ -88,8 +91,6 @@ if (isset($_POST['movie'])) {
                         <div class="tag">
                             <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                         </div>
-                        <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
-
 
                     </div>
                 <?php endforeach; ?>
