@@ -89,7 +89,7 @@ session_start();
                         <div class="tag">
                             <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                         </div>
-                        <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">Add to watchlist</button>
+                        <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
 
 
                     </div>
