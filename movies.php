@@ -427,28 +427,21 @@ if (isset($_POST['genre'])) {
         return $movie['genre'] === $genre;
     });
 }
-// Array with all genres
-$genres = [
-    'All',
-    'Action',
-    'Adventure',
-    'Animation',
-    'Biography',
-    'Comedy',
-    'Crime',
-    'Drama',
-    'Family',
-    'Fantasy',
-    'Film-Noir',
-    'History',
-    'Horror',
-    'Music',
-    'Musical',
-    'Mystery',
-    'Romance',
-    'Sci-Fi',
-    'Sport',
-    'Thriller',
-    'War',
-    'Western'
-];
+// Array with all genres from $movies array
+$genres = [];
+foreach ($movies as $movie) {
+    $genres[] = $movie['genre'];
+}
+// Remove duplicates and sort alphabetically
+$genres = array_unique($genres);
+sort($genres);
+// Filter movies by genre if genre button is pressed in index.php form
+if (isset($_POST['genre'])) {
+    if ($_POST['genre'] === "All") {
+        return $movies;
+    }
+    $genre = $_POST['genre'];
+    $movies = array_filter($movies, function ($movie) use ($genre) {
+        return $movie['genre'] === $genre;
+    });
+}
