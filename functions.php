@@ -1,19 +1,5 @@
 <?php
 require 'movies.php';
-
-/* function addToWatchlist()
-{
-    if (isset($_POST['movie'])) {
-        $movie = $_POST['movie'];
-        //if watchlist array is empty add movie to watchlist array
-        if (empty($_SESSION['watchlist'])) {
-            $_SESSION['watchlist'] = array($movie);
-        } else {
-            //if watchlist array is not empty add movie to watchlist array
-            array_push($_SESSION['watchlist'], $movie);
-        }
-    }
-} */
 // add movie to watchlist array function only works if movie is not already in watchlist array
 function addToWatchlist()
 {

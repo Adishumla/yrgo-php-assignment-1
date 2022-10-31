@@ -30,8 +30,8 @@ if (isset($_POST['remove'])) {
 ?>
 
 <body>
-    <a href="index.php" class="back-button">Back</a>
     <?php
+    require 'navbar.php';
     // show all movies added to watchlist
     showWatchlist();
     ?>

@@ -23,25 +23,19 @@ if (isset($_POST['movie'])) {
 
 
 <body>
-    <header>
-        <h1>Movie Library</h1>
-        <!--button to watchlist.php-->
-        <a href="watchlist.php" class="watchlist-button">Watchlist</a>
+    <?php
+    //link navbar
+    require 'navbar.php';
+    ?>
+    <!-- header -->
+    <header class="header">
+        <h1 class="header-title">Movie Library</h1>
     </header>
     <main>
         <section class="main-photos">
             <img class="main-photo" src="posters/wide-posters/Last-Night-In-Soho-023.jpeg" alt="">
         </section>
         <section class="genre-section">
-            <!-- if button is pressed change genre in movies.php filter-->
-            <!-- <form class="filter-form" action="index.php" method="POST">
-                <button class="genre-button" name="genre" value="Action">Action</button>
-                <button class="genre-button" name="genre" value="Sci-Fi">Sci-Fi</button>
-                <button class="genre-button" name="genre" value="Horror">Horror</button>
-                 remove filter
-            <button class="genre-button" name="genre" value="All">All</button>
-            </form> -->
-
             <!-- form for all genre in $genres array -->
             <form class="filter-form" action="index.php" method="POST">
                 <!-- <?php foreach ($genres as $genre) : ?>

@@ -48,3 +48,6 @@ div.movie img:hover {
   background: var(--persian-green);
   color: var(--white);
 }
+.navbar-link:hover {
+  color: var(--persian-green);
+}
