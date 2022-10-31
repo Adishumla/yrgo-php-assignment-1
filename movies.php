@@ -418,7 +418,7 @@ $genres = [];
 $genres = array_unique($genres);
 sort($genres);
 //filter movies by genre if genre button is pressed in index.php form
-if (isset($_POST['genre'])) {
+/* if (isset($_POST['genre'])) {
     if ($_POST['genre'] === "All") {
         return $movies;
     }
@@ -426,7 +426,7 @@ if (isset($_POST['genre'])) {
     $movies = array_filter($movies, function ($movie) use ($genre) {
         return $movie['genre'] === $genre;
     });
-}
+} */
 // Array with all genres from $movies array
 $genres = [];
 foreach ($movies as $movie) {
