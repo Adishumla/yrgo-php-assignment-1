@@ -1,4 +1,4 @@
-![I am toast](gif/toast.gif)
+![I am toast](gif/toast.gif){:height="50%" width="50%"}
 
 # Project Title
 
