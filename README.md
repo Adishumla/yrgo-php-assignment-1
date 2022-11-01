@@ -1,4 +1,3 @@
-![I am toast](gif/toast.gif)
 <img src="gif/toast.gif" width="100%">
 
 # Project Title
