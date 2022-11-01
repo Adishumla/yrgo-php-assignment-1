@@ -410,8 +410,10 @@ $movies = [
         'photo' => 'posters/Whiplash.jpeg'
     ],
 ];
+// make everything in array lowercase array_map
 //foreach genre from $movies, remove duplicates and sort alphabetically, then add to $genres array
 $genres = [];
+
 /* foreach ($movies as $movie) {
     $genres[] = $movie['genre'];
 } */
