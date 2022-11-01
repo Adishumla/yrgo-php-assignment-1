@@ -1,4 +1,10 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+    session_unset();
+    session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +41,8 @@ if (isset($_POST['movie'])) {
         <section class="main-photos">
             <img class="main-photo" src="posters/wide-posters/Last-Night-In-Soho-023.jpeg" alt="">
         </section>
+        <h2 class="movie-grid-header">All our movies</h2>
+
         <section class="genre-section">
             <!-- form for all genre in $genres array -->
             <form class="filter-form" action="index.php" method="POST">
@@ -55,7 +63,6 @@ if (isset($_POST['movie'])) {
 
 
         </section>
-        <h2 class="movie-grid-header">All our movies</h2>
         <?php
         //show movies added to watchlist
         ?>
@@ -75,11 +82,11 @@ if (isset($_POST['movie'])) {
         </section>
         <!-- movie section that gets movie movie genre from genre-section buttons and filter them-->
         <section class="movie-grid">
-            <form action="index.php" method="post">
+            <form action="" method="post">
                 <?php foreach ($movies as $movie => $movieInfo) : ?>
                     <div class="movie" id="<?php echo $movieInfo['genre'] ?>">
                         <div class="add-movie">
-                            <button class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
+                            <button onclick="" class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
                         </div>
                         <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
                         <!-- <h2><?php echo $movie ?></h2>
@@ -91,13 +98,12 @@ if (isset($_POST['movie'])) {
                         <div class="tag">
                             <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                         </div>
-
                     </div>
                 <?php endforeach; ?>
             </form>
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <p>© 2021 Movie Library</p>
     </footer>
 </body>

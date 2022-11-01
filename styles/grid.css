@@ -1,9 +1,10 @@
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   grid-gap: 1rem;
 }
+
 div.movie {
 }
 div.movie img {
@@ -16,16 +17,17 @@ div.movie img {
   justify-content: center;
 }
 .main-photo {
-  width: 100%;
+  width: 120%;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin: 0px;
 }
 
 .movie-grid-header {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
   font-size: 1.5rem;
+  margin: 0;
+  padding: 30px;
 }
 
 .tag {
@@ -83,7 +85,7 @@ div.movie img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 768px) {
@@ -142,4 +144,21 @@ div.movie img {
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
+}
+
+//footer
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f5f5f5;
+}
+@media (min-width: 768px) {
+  .movie-grid {
+    justify-content: center;
+  }
+  .main-photo {
+    width: 100%;
+  }
 }
