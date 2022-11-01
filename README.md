@@ -1,5 +1,5 @@
-![I am toast](gif/toast.gif){:height="50%" width="50%"}
-<img sr="https://media.giphy.com/media/xT1XGOC7DVR25EqdQA/giphy.gif" width="100%">
+![I am toast](gif/toast.gif)
+<img src="https://media.giphy.com/media/xT1XGOC7DVR25EqdQA/giphy.gif" width="100%">
 
 # Project Title
 
