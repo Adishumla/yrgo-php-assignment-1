@@ -1,6 +1,6 @@
 <img src="gif/toast.gif" width="100%">
 
-# Project Title
+# Movie Library
 
 Text about the project and why it exists. This would also be a great place to link the project on One.com.
 
