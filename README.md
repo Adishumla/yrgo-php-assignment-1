@@ -1,4 +1,5 @@
 ![I am toast](gif/toast.gif){:height="50%" width="50%"}
+<img sr="gif/toast.gif" width="100%">
 
 # Project Title
 
