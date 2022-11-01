@@ -1,4 +1,3 @@
-INSERT MANDATORY GIF
 ![I am toast](gif/toast.gif)
 
 # Project Title
