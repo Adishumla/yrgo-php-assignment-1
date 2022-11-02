@@ -410,25 +410,10 @@ $movies = [
         'photo' => 'posters/Whiplash.jpeg'
     ],
 ];
-// make everything in array lowercase array_map
-//foreach genre from $movies, remove duplicates and sort alphabetically, then add to $genres array
 $genres = [];
-
-/* foreach ($movies as $movie) {
-    $genres[] = $movie['genre'];
-} */
 $genres = array_unique($genres);
 sort($genres);
-//filter movies by genre if genre button is pressed in index.php form
-/* if (isset($_POST['genre'])) {
-    if ($_POST['genre'] === "All") {
-        return $movies;
-    }
-    $genre = $_POST['genre'];
-    $movies = array_filter($movies, function ($movie) use ($genre) {
-        return $movie['genre'] === $genre;
-    });
-} */
+
 // Array with all genres from $movies array
 $genres = [];
 foreach ($movies as $movie) {
@@ -447,7 +432,7 @@ if (isset($_POST['genre'])) {
         return $movie['genre'] === $genre;
     });
 }
-//array with all ratings from $movies array
+//array with all ratings from $movies array (currently not used)
 $ratings = [];
 foreach ($movies as $movie) {
     $ratings[] = $movie['rating'];
@@ -462,7 +447,3 @@ if (isset($_POST['rating'])) {
         return $movie['rating'] >= $rating;
     });
 }
-// if isset movie in index.php form, add to $watchlist array
-/* if (isset($_POST['movie'])) {
-    $watchlist[] = $_POST['movie'];
-} */

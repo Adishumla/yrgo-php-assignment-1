@@ -19,6 +19,8 @@ if (!isset($_SESSION)) {
 <?php
 require 'movies.php';
 require 'functions.php';
+
+// if movie is posted, remove from watchlist
 if (isset($_POST['remove'])) {
     $movie = $_POST['remove'];
     //if watchlist array is not empty remove movie from watchlist array
