@@ -23,4 +23,4 @@ Code review written by [Jane Doh](https://github.com/username).
 Tested by the following people:
 
 1. Niklas
-2. John Doe
+2. Styrjörn

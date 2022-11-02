@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 require 'movies.php';
 // add movie to watchlist array function only works if movie is not already in watchlist array
 function addToWatchlist()
@@ -36,7 +38,9 @@ function showWatchlist()
     }
     // if watchlist is empty show message
     if (empty($_SESSION['watchlist'])) {
-        echo "<h2 class='movie-grid-header'>Your watchlist is empty</h2>";
+?>
+        <h2 class="movie-grid-header">Your watchlist is empty</h2>
+    <?php
     } else { ?>
         <h2 class="movie-grid-header">Your watchlist</h2>
         <form action="watchlist.php" method="post">
