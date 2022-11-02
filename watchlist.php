@@ -2,6 +2,10 @@
 if (!isset($_SESSION)) {
     session_start();
 }
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1800)) {
+    session_unset();
+    session_destroy();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +18,7 @@ if (!isset($_SESSION)) {
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="/styles/effect.css">
-    <title>Document</title>
+    <title>Watchlist</title>
 </head>
 <?php
 require 'movies.php';

@@ -16,6 +16,7 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="/styles/effect.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
     <title>Movie Library</title>
 </head>
 <?php
@@ -25,7 +26,6 @@ if (isset($_POST['movie'])) {
     addToWatchlist($_POST['movie']);
 }
 ?>
-
 
 <body>
     <?php
@@ -38,18 +38,15 @@ if (isset($_POST['movie'])) {
     </header>
     <main>
         <section class="main-photos">
-            <img class="main-photo" src="posters/wide-posters/Last-Night-In-Soho-023.jpeg" alt="">
+            <img class="main-photo" src="posters/wide-posters/Last-Night-In-Soho-023.jpeg" alt="Anya Taylor-Joy staring at the camera
+             with a blue light shining on her from the left and a green light from the right, the background is black.
+             img from the movie Last Night is Soho.">
         </section>
         <h2 class="movie-grid-header">All our movies</h2>
 
         <section class="genre-section">
             <!-- form for all genre in $genres array -->
             <form class="filter-form" action="index.php" method="POST">
-                <!-- <?php foreach ($genres as $genre) : ?>
-                    <button class="genre-button" name="genre" value="<?= $genre ?>"><?= $genre ?></button>
-                <?php endforeach; ?>
-                 remove filter
-                <button class="genre-button" name="genre" value="All">All</button> -->
                 <!--dropdown that filters all genres -->
                 <select class="genre-button" name="genre" id="genre">
                     <option value="All">All</option>
@@ -57,29 +54,8 @@ if (isset($_POST['movie'])) {
                         <option value="<?= $genre ?>"><?= $genre ?></option>
                     <?php endforeach; ?>
                 </select>
-
                 <button class="genre-button" type="submit">Filter</button>
-
-
         </section>
-        <?php
-        //show movies added to watchlist
-        ?>
-        <section class="movie-grid">
-            <?php //foreach ($movies as $movie => $movieInfo) :
-            ?>
-            <!-- <div class="movie">
-                <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" /> -->
-            <!-- <h2><?php echo $movie ?></h2>
-                    <p><?php echo $movieInfo['director'] ?></p>
-                    <p><?php echo $movieInfo['year'] ?></p>
-                    <p><?php echo $movieInfo['genre'] ?></p>
-                    <p><?php echo $movieInfo['rating'] ?></p> -->
-            </div>
-            <?php //endforeach;
-            ?>
-        </section>
-        <!-- movie section that gets movie movie genre from genre-section buttons and filter them-->
         <section class="movie-grid">
             <form action="" method="post">
                 <?php foreach ($movies as $movie => $movieInfo) : ?>
@@ -88,12 +64,6 @@ if (isset($_POST['movie'])) {
                             <button onclick="" class="add-button watchlist-button" name="movie" value="<?php echo $movie ?>">+</button>
                         </div>
                         <img src="<?php echo $movieInfo['photo'] ?>" alt="<?php echo $movie ?>" />
-                        <!-- <h2><?php echo $movie ?></h2>
-                        <p><?php echo $movieInfo['director'] ?></p>
-                        <p><?php echo $movieInfo['year'] ?></p>
-                        <p><?php echo $movieInfo['genre'] ?></p>
-                        <p><?php echo $movieInfo['rating'] ?></p> -->
-                        <!-- movie rating as tag -->
                         <div class="tag">
                             <p><?php echo "IMDB: " . $movieInfo['rating'] ?></p>
                         </div>
@@ -103,7 +73,7 @@ if (isset($_POST['movie'])) {
         </section>
     </main>
     <footer class="footer">
-        <p>© 2021 Movie Library</p>
+        <p class="footer-text">© 2021 Movie Library</p>
     </footer>
 </body>
 
