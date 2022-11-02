@@ -3,7 +3,7 @@
 # Movie Library
 
 This is a movie Library where you can add movies to your watchlist that is saved in your current session.
-To try it out, go to https://garali.se/movie-library/index.php and add some movies to your watchlist.
+To try it out, go to https://garali.se/movie-library and add some movies to your watchlist.
 
 # Installation
 
