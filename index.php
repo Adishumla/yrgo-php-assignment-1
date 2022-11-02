@@ -19,7 +19,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
     <title>Movie Library</title>
 </head>
 <?php
-//require movies.php
 require 'movies.php';
 require 'functions.php';
 if (isset($_POST['movie'])) {

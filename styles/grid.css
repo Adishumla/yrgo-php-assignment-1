@@ -1,12 +1,13 @@
+body {
+  padding: 20px;
+}
 .movie-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   grid-gap: 1rem;
 }
 
-div.movie {
-}
 div.movie img {
   width: 130px;
   height: 200px;
@@ -31,7 +32,6 @@ div.movie img {
 }
 
 .tag {
-  // put at the bottom on the poster
   position: absolute;
   margin-top: -30px;
   background-color: yellow;
@@ -39,30 +39,14 @@ div.movie img {
   height: 15px;
   color: black;
   padding: 5px;
-  //border: 1px solid yellow;
   font-size: 0.8rem;
   opacity: 0.9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.add-button {
-  /*   position: absolute;
-  margin-top: -301px;
-  background-color: #f5f5f5;
-  width: 30px;
-  height: 30px;
-  color: black;
-  padding: 5px;
-  //border: 1px solid yellow;
-  font-size: 0.8rem;
-  opacity: 0.9;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
+
 .add-movie {
-  // put at the top of the img
   position: absolute;
   margin-bottom: -40px;
 }
@@ -75,7 +59,6 @@ div.movie img {
 .genre-button {
   margin: 0 5px;
   padding: 15px;
-  //font-size: 1.2rem;
   border: 1px solid black;
   border-radius: 5px;
   background-color: white;
@@ -86,19 +69,6 @@ div.movie img {
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 0px;
-}
-
-@media (min-width: 768px) {
-  div.movie {
-    width: 200px;
-  }
-  div.movie img {
-    width: 200px;
-    height: 300px;
-  }
-  .movie-grid-header {
-    font-size: 2rem;
-  }
 }
 
 //navbar
@@ -154,7 +124,17 @@ div.movie img {
   height: 100px;
   background-color: #f5f5f5;
 }
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+  div.movie {
+    width: 200px;
+  }
+  div.movie img {
+    width: 200px;
+    height: 300px;
+  }
+  .movie-grid-header {
+    font-size: 2rem;
+  }
   .movie-grid {
     justify-content: center;
   }

@@ -1,24 +1,3 @@
-div.movie img {
-  transition: all 0.2s ease-in-out;
-}
-/* div.movie img:hover {
-  background-color: #000000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-}
-.ma */
-in-photo {
-  transition: all 0.2s ease-in-out;
-}
-.main-photo:hover {
-  background-color: #000000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -moz-opacity: 0.5;
-  -khtml-opacity: 0.5;
-}
 .tag {
   background: rgba(255, 243, 0, 0.44);
   border-radius: 5px;
