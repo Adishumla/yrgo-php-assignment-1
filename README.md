@@ -2,11 +2,14 @@
 
 # Movie Library
 
-Text about the project and why it exists. This would also be a great place to link the project on One.com.
+This is a movie Library where you can add movies to your watchlist that is saved in your current session.
+To try it out, go to https://garali.se/movie-library/index.php and add some movies to your watchlist.
 
 # Installation
 
-Add the installation instructions.
+-   Clone the repository
+-   start a local server in the root folder of the project (e.g. php -S localhost:8000)
+-   go to localhost:8000/index.php in your browser and enjoy!
 
 # Code Review
 
