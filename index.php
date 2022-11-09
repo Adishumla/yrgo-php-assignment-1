@@ -36,6 +36,8 @@ if (isset($_POST['movie'])) {
     <header class="header">
         <h1 class="header-title">Movie Library</h1>
     </header>
+    <!-- Bypass block on side-->
+
     <main>
         <section class="main-photos">
             <img class="main-photo" src="posters/wide-posters/Last-Night-In-Soho-023.jpeg" alt="Anya Taylor-Joy staring at the camera
